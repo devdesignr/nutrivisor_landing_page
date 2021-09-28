@@ -5,8 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrivisor :: Manage your business</title>
+    <!-- Feather font CSS -->
+    <link rel="stylesheet" href="./assets/fonts/Feather/feather.css" />
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css" />
+    <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css" />
+    <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css" />
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+    <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
-    <h1>Hello from Nutrivisor</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="./assets/images/brand.svg" class="navbar-brand-img" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fe fe-x"></i>
+                </button>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#food">
+                            For Food
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarBusinesses" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            For Businesses
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarBusinesses">
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item" href="#">
+                                    <div class="ml-4">
+                                        <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                            Sign Up
+                                        </h6>
+                                        <p class="font-size-sm text-gray-700 mb-0">
+                                            List your business with us
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <div class="ml-4">
+                                        <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                            Sign In
+                                        </h6>
+                                        <p class="font-size-sm text-gray-700 mb-0">
+                                            Manage your businesses' orders
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDelivery" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            For Delivery
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDelivery">
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item" href="#">
+                                    <div class="ml-4">
+                                        <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                            Become a partner
+                                        </h6>
+                                        <p class="font-size-sm text-gray-700 mb-0">
+                                            Help us deliver food to everyone.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <div class="ml-4">
+                                        <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                            Sign Up
+                                        </h6>
+                                        <p class="font-size-sm text-gray-700 mb-0">
+                                            Make extra revenue through delivery
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="list-group-item" asp-controller="Account" asp-action="Login">
+                                    <div class="ml-4">
+                                        <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                            Sign In
+                                        </h6>
+                                        <p class="font-size-sm text-gray-700 mb-0">
+                                            Manage your orders and deliveries
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a class="navbar-btn btn btn-sm btn-secondary-soft ml-auto mr-4" href="#">
+                    Sign Up
+                </a>
+                <a href="#" class="btn btn-primary-soft btn-sm">
+                    Sign In
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="./assets/libs/aos/dist/aos.js"></script>
+    <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+    <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/theme.js"></script>
 </body>
 </html>
