@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Feather font CSS -->
+    <link rel="stylesheet" href="./assets/fonts/Feather/feather.css" />
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css" />
+    <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css" />
+    <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css" />
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+    <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+    <section class="section-border border-primary">
+        <div class="container d-flex flex-column">
+            <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+                <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
+                    <a asp-controller="Home" asp-action="Index">
+                        <img src="./assets/images/brand.svg" alt="" class="footer-brand img-fluid mb-5 navbar-brand-img">
+                    </a>
+                    <h1 class="mb-0 font-weight-bold text-center">
+                        Sign In
+                    </h1>
+                    <p class="mb-6 text-muted text-center">
+                        Empowering your employees to improve their nutrition.
+                    </p>
+                    <form class="mb-6 w-100" asp-controller="Account" asp-action="Login" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+                        <input type="hidden" asp-for="ReturnUrl" />
+                        <div class="form-group">
+                            <label></label>
+                            <input type="email" class="form-control" autofocus placeholder="name@address.com">
+                            <span class="text-danger small mt-0 mb-1"></span>
+                        </div>
+                        <div class="form-group mb-5">
+                            <label asp-for="Password"></label>
+                            <input type="password" class="form-control" asp-for="Password" placeholder="Enter your password">
+                            <span asp-validation-for="Password" class="text-danger small mt-0 mb-1"></span>
+                        </div>
+                        <button class="btn btn-primary" name="button" value="login">
+                            Sign In
+                        </button>
+                    </form>
+                    <p class="mb-0 font-size-sm text-center text-muted">
+                        Forgot Your Password? <a href="./index.html">Reset Password</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
